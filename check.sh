@@ -33,7 +33,7 @@ do
 # same for v16
  elif [[ $check_v16 = "16.1.4"  ]] #make snapshot
  then
-   replayce=$(echo "$i" | sed 's/\./_/g')
+   replayce=$(echo "v_$i" | sed 's/\./_/g'| sed 's/\-/_/g')
     if request_api_chek | grep $replayce; then
       echo "env is defined"
     else
